@@ -18,51 +18,51 @@ Board.prototype = {
     this.drawBoard();
     if (areEqual(this.board[0][0], this.board[0][1], this.board[0][2]) && this.board[0][0]) {
       if (this.board[0][0] === 'X') {
-        console.log('player 1 wins');
+        console.log('player 1 wins, type playAgain() to play again.');
       } else {
-        console.log('player 2 wins')
+        console.log('player 2 wins, type playAgain() to play again.')
       }
     } else if (areEqual(this.board[1][0], this.board[1][1], this.board[1][2]) && this.board[1][0]) {
       if (this.board[1][0] === 'X') {
-        console.log('player 1 wins');
+        console.log('player 1 wins, type playAgain() to play again.');
       } else {
-        console.log('player 2 wins')
+        console.log('player 2 wins, type playAgain() to play again.')
       }
     } else if (areEqual(this.board[2][0], this.board[2][1], this.board[2][2]) && this.board[2][0]) {
       if (this.board[2][0] === 'X') {
-        console.log('player 1 wins');
+        console.log('player 1 wins, type playAgain() to play again.');
       } else {
-        console.log('player 2 wins')
+        console.log('player 2 wins, type playAgain() to play again.')
       }
     } else if (areEqual(this.board[0][0], this.board[1][0], this.board[2][0]) && this.board[0][0]) {
       if (this.board[0][0] === 'X') {
-        console.log('player 1 wins');
+        console.log('player 1 wins, type playAgain() to play again.');
       } else {
-        console.log('player 2 wins')
+        console.log('player 2 wins, type playAgain() to play again.')
       }
     } else if (areEqual(this.board[0][1], this.board[1][1], this.board[2][1]) && this.board[0][1]) {
       if (this.board[0][0] === 'X') {
-        console.log('player 1 wins');
+        console.log('player 1 wins, type playAgain() to play again.');
       } else {
-        console.log('player 2 wins')
+        console.log('player 2 wins, type playAgain() to play again.')
       }
     } else if (areEqual(this.board[0][2], this.board[1][2], this.board[2][2]) && this.board[0][2]) {
       if (this.board[0][2] === 'X') {
-        console.log('player 1 wins');
+        console.log('player 1 wins, type playAgain() to play again.');
       } else {
-        console.log('player 2 wins')
+        console.log('player 2 wins, type playAgain() to play again.')
       }
     } else if (areEqual(this.board[0][0], this.board[1][1], this.board[2][2]) && this.board[0][0]) {
       if (this.board[0][0] === 'X') {
-        console.log('player 1 wins');
+        console.log('player 1 wins, type playAgain() to play again.');
       } else {
-        console.log('player 2 wins')
+        console.log('player 2 wins, type playAgain() to play again.')
       }
     } else if (areEqual(this.board[0][2], this.board[1][1], this.board[2][0]) && this.board[0][2]) {
       if (this.board[0][2] === 'X') {
-        console.log('player 1 wins');
+        console.log('player 1 wins, type playAgain() to play again.');
       } else {
-        console.log('player 2 wins')
+        console.log('player 2 wins, type playAgain() to play again.')
       }
     } else {
       cb();
@@ -96,6 +96,12 @@ playO = function playO(row, column) {
     console.log('Player 1, enter your turn by typing playX(row, column)');
   });
 };
+
+playAgain = function playAgain() {
+  board.board = [['','',''],['','',''],['','','']];
+  console.log('Player 1, enter your turn by typing playX(row, column)');
+  board.drawBoard();
+}
 
 //test
 console.log('Player 1, enter your turn by typing playX(row, column)');
